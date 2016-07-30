@@ -40,7 +40,6 @@ def get_intterfaces():
 	for port, device, address, current_address in spoofer.find_interfaces(targets=targets):
 		devlist.append(device)
 		portlist.append(port)
-		print port, device, address, current_address
 
 class mywindow(gtk.Window):
 
@@ -79,7 +78,6 @@ class mywindow(gtk.Window):
 		if self.entry.entry.get_text() == ("Choose Network Card"):
 			print "Choose from combo\n"
 		elif self.entry1.get_text() == (""):
-			print "Enter New Mac Address\n"
 			self.label3.set_text("Enter New Mac Address")
 		else:
 			spoofer = None
